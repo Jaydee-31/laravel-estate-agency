@@ -13,9 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 // Route::get('/', function () {
 //     return view('homepage');
 // });
@@ -43,3 +43,9 @@ Route::get('/property-grid', function () {
 Route::get('/property-single', function () {
     return view('property-single');
 })->name('property-single');
+
+// Route::get('create', [MessagesController::class, 'create']);
+
+// Route::resource('messages', MessagesController::class
+// );
+Route::post('/messages', 'MessagesController@store');
