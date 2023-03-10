@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PropertyController;
+use App\Http\Controllers\Admin\AdminController;
+// use App\Http\Controllers\MessagesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,20 +35,12 @@ Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
 
-Route::get('/blog', function () {
-    return view('blog');
-})->name('blog');
+Route::get('/property',[PropertyController::class, 'index'
+])->name('property');
 
-Route::get('/property-grid', function () {
-    return view('property-grid');
-})->name('property-grid');
-
-Route::get('/property-single', function () {
-    return view('property-single');
-})->name('property-single');
+Route::resource('/admin/properties', AdminController::class);
 
 // Route::get('create', [MessagesController::class, 'create']);
 
 // Route::resource('messages', MessagesController::class
 // );
-Route::post('/messages', 'MessagesController@store');
