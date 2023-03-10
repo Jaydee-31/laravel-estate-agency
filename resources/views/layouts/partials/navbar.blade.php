@@ -10,29 +10,30 @@
             <a class="navbar-brand text-brand" href="{{ route('home') }}"><span class="color-c">JM</span>Estate<span class="color-b">Agency</span></a>
         
             <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
-            <ul class="navbar-nav">
-        
-                <li class="nav-item">
-                <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="{{ route('home') }}">Home</a>
-                </li>
-        
-                <li class="nav-item">
-                <a class="nav-link {{ Request::is('about') ? 'active' : '' }}" href="{{ route('about') }}">About</a>
-                </li>
-        
-                <li class="nav-item">
-                <a class="nav-link {{ Request::is('property-grid') ? 'active' : '' }}" href="{{ route('property-grid') }}">Property</a>
-                </li>
-        
-                <li class="nav-item">
-                <a class="nav-link {{ Request::is('contact') ? 'active' : '' }}" href="{{ route('contact') }}">Contact</a>
-                </li>
-            </ul>
+                <ul class="navbar-nav">
+            
+                    <li class="nav-item">
+                    <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="{{ route('home') }}">Home</a>
+                    </li>
+            
+                    <li class="nav-item">
+                    <a class="nav-link {{ Request::is('about') ? 'active' : '' }}" href="{{ route('about') }}">About</a>
+                    </li>
+            
+                    <li class="nav-item">
+                    <a class="nav-link {{ Request::is('property') ? 'active' : '' }}" href="{{ route('property') }}">Property</a>
+                    </li>
+            
+                    <li class="nav-item">
+                    <a class="nav-link {{ Request::is('contact') ? 'active' : '' }}" href="{{ route('contact') }}">Contact</a>
+                    </li>
+                    
+                </ul>
             </div>
         
             <button type="button" class="btn btn-b-n navbar-toggle-box navbar-toggle-box-collapse" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01">
             <i class="bi bi-search"></i>
             </button>
-        
+            {{-- <a class="nav-link text-uppercase" href="{{ route('admin.properties.index') }}">Admin</a> --}}
         </div>
         </nav>
